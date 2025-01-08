@@ -46,9 +46,7 @@ No additional setup is required for Android. The module will automatically link 
 ### Import the Module
 
 ```javascript
-import {NativeModules} from 'react-native';
-
-const {ReactNativeAppExit} = NativeModules;
+import ReactNativeAppExit from '@sekizlipenguen/react-native-app-exit';
 ```
 
 ### Exit the Application
@@ -64,9 +62,7 @@ ReactNativeAppExit.exitApp();
 ```javascript
 import React from 'react';
 import {Button, View, Alert} from 'react-native';
-import {NativeModules} from 'react-native';
-
-const {ReactNativeAppExit} = NativeModules;
+import ReactNativeAppExit from '@sekizlipenguen/react-native-app-exit';
 
 const App = () => {
   const handleExitApp = () => {
@@ -95,11 +91,9 @@ export default App;
 ## Platform-Specific Details
 
 ### Android
-
 - On Android, this module uses `System.exit(0)` to force the application to close.
 
 ### iOS
-
 - On iOS, force-closing the app programmatically is not recommended by Apple, but this module implements a similar approach. Use it cautiously.
 
 ---

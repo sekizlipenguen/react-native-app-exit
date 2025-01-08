@@ -1,6 +1,6 @@
 {
   "name": "@sekizlipenguen/react-native-app-exit",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A lightweight React Native module to programmatically exit the application. Compatible with React Native 0.60 and above.",
   "main": "src/index.js",
   "types": "src/index.d.ts",
