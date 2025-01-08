@@ -1,3 +1,7 @@
+![platforms](https://img.shields.io/badge/platforms-Android%20%7C%20iOS-brightgreen.svg?style=flat-square&colorB=191A17)
+[![npm](https://img.shields.io/npm/v/@sekizlipenguen/react-native-app-exit.svg?style=flat-square)](https://www.npmjs.com/package/@sekizlipenguen/react-native-app-exit)
+[![npm](https://img.shields.io/npm/dm/@sekizlipenguen/react-native-app-exit.svg?style=flat-square&colorB=007ec6)](https://www.npmjs.com/package/@sekizlipenguen/react-native-app-exit)
+
 # @sekizlipenguen/react-native-app-exit
 
 A lightweight React Native module to programmatically exit the application. Compatible with React Native 0.60 and above.
@@ -94,7 +98,8 @@ export default App;
 - On Android, this module uses `System.exit(0)` to force the application to close.
 
 ### iOS
-- On iOS, force-closing the app programmatically is not recommended by Apple, but this module implements a similar approach. Use it cautiously.
+
+- On iOS, force-closing the app programmatically is not recommended by Apple. This module provides a similar functionality, but it is advised to implement a confirmation alert before using this feature to ensure a better user experience.
 
 ---
 
