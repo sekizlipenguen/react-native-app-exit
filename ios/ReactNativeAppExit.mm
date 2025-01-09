@@ -1,7 +1,13 @@
-# import "ReactNativeAppExit.h" @ implementation ReactNativeAppExit // React Native modülü tanımlaması
+#import "ReactNativeAppExit.h"
 
-RCT_EXPORT_MODULE () ; // Uygulama çıkış fonksiyonu
+@implementation ReactNativeAppExit
 
-RCT_EXPORT_METHOD (exitApp) {
-exit (0) ;
-} @ end
+// React Native modülünün tanımlaması
+RCT_EXPORT_MODULE();
+
+// Uygulama çıkış fonksiyonu
+RCT_EXPORT_METHOD(exitApp) {
+exit(0);
+}
+
+@end
