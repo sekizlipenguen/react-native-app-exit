@@ -13,6 +13,12 @@ export function exitApp() {
   ReactNativeAppExit.exitApp();
 }
 
+// Uygulamayı yeniden başlatmak için fonksiyonu dışa aktar
+export function restartApp() {
+  ReactNativeAppExit.restartApp();
+}
+
 export default {
   exitApp,
+  restartApp,
 };

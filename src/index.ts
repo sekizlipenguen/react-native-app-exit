@@ -1,13 +1,16 @@
-import {exitApp as jsExitApp} from './index';
+import {exitApp as jsExitApp, restartApp as jsRestartApp} from './index';
 
 // TypeScript tip tanımlaması
 export interface ReactNativeAppExitSpec {
     exitApp: () => void;
+    restartApp: () => void;
 }
 
-// JavaScript fonksiyonunu TypeScript'e sarıyoruz
+// JavaScript fonksiyonlarını TypeScript'e sarıyoruz
 export const exitApp: ReactNativeAppExitSpec['exitApp'] = jsExitApp;
+export const restartApp: ReactNativeAppExitSpec['restartApp'] = jsRestartApp;
 
 export default {
     exitApp,
+    restartApp,
 };

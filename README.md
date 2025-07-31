@@ -4,7 +4,7 @@
 
 # @sekizlipenguen/react-native-app-exit
 
-A lightweight React Native module to programmatically exit the application. Compatible with React Native 0.60 and above.
+A lightweight React Native module to programmatically exit or restart the application. Compatible with React Native 0.60 and above.
 
 ---
 
@@ -61,6 +61,14 @@ Call the `exitApp` method to programmatically close the app:
 ReactNativeAppExit.exitApp();
 ```
 
+### Restart the Application
+
+Call the `restartApp` method to programmatically restart the app:
+
+```javascript
+ReactNativeAppExit.restartApp();
+```
+
 #### Example:
 
 ```javascript
@@ -80,9 +88,21 @@ const App = () => {
     );
   };
 
+  const handleRestartApp = () => {
+    Alert.alert(
+        'Restart App',
+        'Are you sure you want to restart the application?',
+        [
+          {text: 'Cancel', style: 'cancel'},
+          {text: 'Yes', onPress: () => ReactNativeAppExit.restartApp()},
+        ]
+    );
+  };
+
   return (
       <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
         <Button title="Exit App" onPress={handleExitApp}/>
+        <Button title="Restart App" onPress={handleRestartApp}/>
       </View>
   );
 };
